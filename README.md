@@ -109,7 +109,8 @@ Password:"
 2. IT IS EXTREMELY IMPORTANT THAT YOU COPY THE RANDOM PASSWORD GENERATED FOR YOU DURING THIS SCRIPT INSTALL.  IT WILL BE AT THE END IN GREEEN, ALONG WITH THE DNS INFORMATION NEEDED LATER.
 
 3. At the end of the script, you will be asked to reset the root password.
---> make it a good one!
+--> If the session should time out,
+        MAKE SURE YOU SSH IN AND CHANGE THE PASSWORD 
 
 
 This will start an AWS instance in the region you've chosen within
