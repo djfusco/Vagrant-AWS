@@ -69,7 +69,9 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-* AWS Infomrmation
+
+AWS Infomrmation
+
 Access Keys
 http://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys
 
@@ -97,6 +99,10 @@ http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html
 $ bash elmsinstall.sh
 ```
 
+NOTE: IT IS EXTREMELY IMPORTANT THAT YOU COPY THE RANDOM PASSWORD GENERATED FOR YOU DURING THIS SCRIPT INSTALL.  IT WILL BE AT THE END IN GREEEN, ALONG WITH THE DNS INFORMATION NEEDED LATER.
+
+
+
 This will start an AWS instance in the region you've chosen within
 your account.  It will then SSH into your instance and install ELMSLN.
 
@@ -123,6 +129,62 @@ Stops and deletes all traces of the Vagrant machine
 ```
 $ vagrant destroy
 ```
+
+## DNS
+
+1. Obtain your IPv4 Public IP from your AWS instance in the
+        "EC2 Management Console"
+http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html
+
+2. Add this and your ELMS install host information to your
+        '/etc/hosts' file (or wherever your hosts file is at)
+
+Example:
+34.216.58.24       studio.drdavebuild.com
+34.216.58.24       inbox.drdavebuild.com
+34.216.58.24       lq.drdavebuild.com
+34.216.58.24       blog.drdavebuild.com
+34.216.58.24       innovate.drdavebuild.com
+34.216.58.24       people.drdavebuild.com
+34.216.58.24       hub.drdavebuild.com
+34.216.58.24       interact.drdavebuild.com
+34.216.58.24       comply.drdavebuild.com
+34.216.58.24       media.drdavebuild.com
+34.216.58.24       lor.drdavebuild.com
+34.216.58.24       grades.drdavebuild.com
+34.216.58.24       discuss.drdavebuild.com
+34.216.58.24       online.drdavebuild.com
+34.216.58.24       courses.drdavebuild.com
+
+34.216.58.24       data-studio.drdavebuild.com
+34.216.58.24       data-inbox.drdavebuild.com
+34.216.58.24       data-lq.drdavebuild.com
+34.216.58.24       data-blog.drdavebuild.com
+34.216.58.24       data-innovate.drdavebuild.com
+34.216.58.24       data-people.drdavebuild.com
+34.216.58.24       data-hub.drdavebuild.com
+34.216.58.24       data-interact.drdavebuild.com
+34.216.58.24       data-comply.drdavebuild.com
+34.216.58.24       data-media.drdavebuild.com
+34.216.58.24       data-lor.drdavebuild.com
+34.216.58.24       data-grades.drdavebuild.com
+34.216.58.24       data-discuss.drdavebuild.com
+34.216.58.24       data-online.drdavebuild.com
+34.216.58.24       data-courses.drdavebuild.com
+
+
+## ELMSLN Login
+
+1. You can now to to your live ELMS install at 'online.domain.com'
+
+Example: http://online.drdavebuild.com
+
+
+2. Enter your login credentials
+        Username: 'admin'
+        Password: 'RANDOMLY GENERATED PASSWORD FROM SCRIPT'
+
+
 
 
 ## Configuration
