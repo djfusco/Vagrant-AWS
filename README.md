@@ -24,8 +24,9 @@ shown below.
 
 ```
 
+$ mkdir VagrantELMS && cd VagrantELMS
 $ sudo vagrant plugin install vagrant-aws
-$ vagrant box add dummy https://github.com/mitchellh/vagrant-aws/raw/master/dummy.box
+$ vagrant box add dummy https://github.com/dfusco/vagrant-aws/raw/master/dummy.box
 $ vagrant init
 ...
 Visit https://jsfiddle.net/djfusco/6a3o3788/2/ and download .sh script
@@ -49,7 +50,7 @@ $ vagrant box add dummy https://github.com/dfusco/Vagrant-AWS/raw/master/dummy.b
 ```
 
 3. Edit your Vagrantfile that looks like the following, filling in
-your information where necessary.
+your information where necessary.  Place this in VagrantELMS directory.
 
 ```
 Vagrant.configure("2") do |config|
@@ -69,6 +70,23 @@ end
 ```
 
 * AWS Infomrmation
+Access Keys
+http://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys
+
+Key Pairs
+http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html
+
+EC2 Instance Types
+https://aws.amazon.com/ec2/instance-types/
+
+Regions and Endpoints
+http://docs.aws.amazon.com/general/latest/gr/rande.html
+
+AMI
+http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html
+
+Security Groups
+http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html
 
 
 4. Visit https://jsfiddle.net/djfusco/6a3o3788/2/ and download .sh script to your Vagrant directory
@@ -89,6 +107,22 @@ no preconfigured defaults.
 If you have issues with SSH connecting, make sure that the instances
 are being launched with a security group that allows SSH access.
 
+6. To change the state of your instance:
+
+SSH into your instance
+```
+$ vagrant ssh
+```
+
+Stop your instance
+```
+$ vagrant halt
+```
+
+Stops and deletes all traces of the Vagrant machine
+```
+$ vagrant destroy
+```
 
 
 ## Configuration
