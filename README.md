@@ -26,7 +26,7 @@ shown below.
 
 $ mkdir VagrantELMS && cd VagrantELMS
 $ sudo vagrant plugin install vagrant-aws
-$ vagrant box add dummy https://github.com/dfusco/vagrant-aws/raw/master/dummy.box
+$ vagrant box add dummy https://github.com/djfusco/Vagrant-AWS/blob/master/dummy.box
 $ vagrant init
 ...
 Visit https://jsfiddle.net/djfusco/6a3o3788/2/ and download .sh script
@@ -45,7 +45,7 @@ box file for Vagrant.
 box using any name you want:
 
 ```
-$ vagrant box add dummy https://github.com/dfusco/Vagrant-AWS/raw/master/dummy.box
+$ vagrant box add dummy https://github.com/djfusco/Vagrant-AWS/blob/master/dummy.box
 ...
 ```
 
@@ -110,7 +110,7 @@ Password:"
 
 3. At the end of the script, you will be asked to reset the root password.
 --> If the session should time out,
-        MAKE SURE YOU SSH IN AND CHANGE THE PASSWORD 
+        MAKE SURE YOU SSH IN AND CHANGE THE PASSWORD
 
 
 This will start an AWS instance in the region you've chosen within
